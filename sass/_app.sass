@@ -1,0 +1,98 @@
+=align-items($align-items)
+	-webkit-box-align: $align-items
+	-webkit-flex-align: $align-items
+	-ms-flex-align: $align-items
+	-webkit-align-items: $align-items
+	align-items: $align-items
+
+=align-self($align-self)
+	-webkit-box-align-self: $align-self
+	-moz-box-align-self: $align-self
+	-ms-flex-align-self: $align-self
+	-webkit-flex-align-self: $align-self
+	align-self: $align-self
+
+.flexbox
+	display: -webkit-box
+	display: -moz-box
+	display: -ms-flexbox
+	display: -webkit-flex
+	display: flex
+
+body
+	font:
+		family: Source Sans Pro
+		size: 16px
+
+@media screen and (min-width: 1000px)
+	body
+		background:
+			image: url(../img/grid-bg.png)
+			repeat: no-repeat
+			position: center bottom
+
+nav
+	@extend .flexbox
+	+align-items(center)
+	border-bottom: 1px solid #DCDCDC
+	height: 100px
+
+	.row
+		@extend .flexbox
+		+align-items(center)
+		padding: 0 15px
+
+		img
+			+align-self(flex-start)
+		p
+			margin-left: auto
+			color: #696969
+
+#welcome-text
+	p
+		font:
+			size: 70px
+			family: Raleway
+		color: #55DA84
+		letter-spacing: 10px
+		text-transform: uppercase
+		margin-top: 60px
+
+@media screen and (max-width: 480px)
+	#welcome-text
+		p
+			margin-top: 20px
+
+#welcome-subtext
+	color: #696969
+	margin-bottom: 30px
+
+#all-devices-img, #ipad-img, #iphone-img
+	display: none
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+	-webkit-transform: translateX(-50%)
+	-moz-transform: translateX(-50%)
+	-ms-transform: translateX(-50%)
+	bottom: 0
+
+@media screen and (orientation: landscape)
+	#all-devices-img, #ipad-img, #iphone-img
+		bottom: auto
+
+@media screen and (min-width: 700px)
+	#all-devices-img, #ipad-img, #iphone-img
+		bottom: 0
+
+@media screen and (max-width: 480px)
+	#iphone-img
+		display: block
+
+@media (min-width: 481px) and (max-width: 768px)
+	#ipad-img
+		display: block
+
+@media (min-width: 769px)
+	#all-devices-img
+		display: block
