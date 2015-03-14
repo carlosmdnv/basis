@@ -1,0 +1,22 @@
+/*
+ * Basis v1.0 (http://carlosmdnv.com/basis)
+ * Copyright 2015 Carlos Medina.
+ * Licensed under MIT (https://github.com/carlosmdnv/basis/blob/master/LICENSE)
+ */
+
+//Charset is set correctly?
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+
+// Import all basis components
+@import "basis/basis";
+
+// Or only this components
+// @import "components/reset";
+// @import "components/grid";
+// @import "components/visibility";
+// @import "components/transforms";
+// @import "components/alignments";
+
+// Here your styles

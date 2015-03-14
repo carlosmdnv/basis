@@ -1,0 +1,45 @@
+.show { display: block; }
+.hide { display: none; }
+.invisible { visibility: hidden; }
+
+// Hide only on certain screens
+
+	@media screen and (max-width: 420px){
+		.sm-hidden{display: none;}
+	}
+
+	@media (min-width: 421px) and (max-width: 768px){
+		.md-hidden{display: none;}
+	}
+
+	@media (min-width: 769px) and (max-width: 1024px){
+		.lg-hidden{display: none;}
+	}
+
+	@media screen and (min-width: 1025px){
+		.xl-hidden{display: none;}
+	}
+
+// Show only on certain screens
+
+	// Not displayed unless the item is within your respective screen
+
+		.sm-only, .md-only, .lg-only, .xl-only{
+			display: none;
+		}
+
+	@media screen and (max-width: 420px){
+		.sm-only{display: block !important;}
+	}
+
+	@media (min-width: 421px) and (max-width: 768px){
+		.md-only{display: block !important;}
+	}
+
+	@media (min-width: 769px) and (max-width: 1024px){
+		.lg-only{display: block !important;}
+	}
+
+	@media screen and (min-width: 1025px){
+		.xl-only{display: block !important;}
+	}
